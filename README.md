@@ -23,7 +23,8 @@ Se ha aprovisionado la capa de infraestructura base superando restricciones de d
 * **SaaS Integration:** Webhook preparado para Microsoft Teams.
 * **Conectividad:** SSH habilitado y reglas de firewall configuradas para tráfico HTTP/HTTPS.
 
-## 📅 Bitácora de Sprints
+📅 Bitácora de Sprints
 
 | Sprint | Objetivo | Estado | Entregables Clave |
 | :--- | :--- | :--- | :--- |
+| **Día 1: Infraestructura Base** | Aprovisionamiento de la capa IaaS y PaaS inicial en Azure Free Tier y validación de la conectividad básica, superando las restricciones de la suscripción. | **Finalizado** | <ul><li>Migración y aprovisionamiento de recursos en la **Región West US 2**.</li><li>**VM Ubuntu 22.04 LTS (IaaS)** configurada y accesible vía SSH.</li><li>**Azure App Service (PaaS)** con Runtime PHP 8.2 configurado.</li><li>Reglas de firewall para tráfico **HTTP/HTTPS** aplicadas.</li><li>**Webhook de Microsoft Teams** preparado para futuras integraciones SaaS.</li></ul> |
