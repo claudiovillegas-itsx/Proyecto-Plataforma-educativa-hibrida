@@ -1,19 +1,29 @@
-# Proyecto-Plataforma-educativa-hibrida
-Repositorio de una plataforma educativa hibrida (IaaS, PaaS, SaaS) en Azure Free Tier con base al temario de fundamentos de computo en la nube.
+# CloudEduHub Mini - Plataforma Educativa Híbrida
 
-Roles del equipo
+Repositorio oficial del proyecto **CloudEduHub Mini**. Implementación de una arquitectura híbrida (IaaS + PaaS + SaaS) desplegada en Azure Free Tier, diseñada para cumplir con los requisitos de la asignatura de Fundamentos de Cómputo en la Nube.
 
-Rol	                                  Responsabilidades	                                    Integrante
-Project Manager (PM)	                Coordinación, entregables, repo y backlog	            Ian Jesus Gutierrez Diaz
-Arquitecto	                          Diseño de arquitectura, diagramas, decisiones IaC	    Claudio Villegas Pensado
-DevOps	                              IaC (ARM/Bicep), despliegue, pipeline CI/CD	          Nombre Apellido
-Backend	                              APIs, integración con Teams/Graph, lógica de clases	  Nombre Apellido
-Frontend	                            Interfaz React, integración con App Service	          Nombre Apellido
-QA / Documentación	                  Pruebas básicas, documentación y demo	                Adan Gonzalez Luna
+## 👥 Equipo y Roles
 
-Primeros sprints
+| Rol | Responsabilidades | Integrante |
+| :--- | :--- | :--- |
+| **Project Manager (PM)** | Gestión del backlog, repositorio y entregables | **Ian Jesus Gutierrez Diaz** |
+| **Arquitecto** | Diseño de topología, diagramas y decisiones de infraestructura | **Claudio Villegas Pensado** |
+| **QA / Documentación** | Pruebas de carga, manuales de usuario y auditoría | **Adan Gonzalez Luna** |
+| **DevOps Lead** | CI/CD pipelines, gestión de secretos y despliegues | *[Nombre Integrante 4]* |
+| **Backend Dev** | Lógica de negocio (Laravel), API y Teams Sync | *[Nombre Integrante 5]* |
+| **Frontend Dev** | Interfaz de usuario (React) y consumo de datos | *[Nombre Integrante 6]* |
 
-Día	    Objetivo del día	        Tareas principales	                                        Entregable
-Día 1	  Fundamento            	  FUNDAMENTACIÓN + PLANEACIÓN (Arquitectura)      	          Repo GitHub inicial + Diagrama arquitectura + VM/App Service provisionados.
-Día 2	  Infraestructura base	    EJECUCIÓN	(Despliegue	+	Integración)             	          App funcional (login + tasks + Teams sync) + Pruebas load (latencia <300ms) + CI/CD pipeline.
-Día 3	  Backend básico	          EVALUACIÓN	+	PRESENTACIÓN                                	Repo	público	+	Video	3min	+	Informe	8págs	+	URL	pública	app.
+## 🏗️ Estado de la Infraestructura (Sprint Día 1)
+
+Se ha aprovisionado la capa de infraestructura base superando restricciones de disponibilidad de la suscripción *Azure for Students*:
+
+* **Región:** `West US 2` (Migrado desde Mexico Central por políticas de restricción de Azure).
+* **IaaS (Compute):** VM Ubuntu 22.04 LTS (SKU: **Standard_B2s**).
+* **PaaS (Web):** Azure App Service (Runtime: PHP 8.2).
+* **SaaS Integration:** Webhook preparado para Microsoft Teams.
+* **Conectividad:** SSH habilitado y reglas de firewall configuradas para tráfico HTTP/HTTPS.
+
+## 📅 Bitácora de Sprints
+
+| Sprint | Objetivo | Estado | Entregables Clave |
+| :--- | :--- | :--- | :--- |
