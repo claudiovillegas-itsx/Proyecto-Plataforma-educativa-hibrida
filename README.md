@@ -10,7 +10,7 @@ Repositorio oficial del proyecto **CloudEduHub Mini**. Implementación de una ar
 | **Arquitecto** | Diseño de topología, diagramas y decisiones de infraestructura | **Claudio Villegas Pensado** |
 | **QA / Documentación** | Pruebas de carga, manuales de usuario y auditoría | **Adan Gonzalez Luna** |
 | **DevOps Lead** | CI/CD pipelines, gestión de secretos y despliegues | **Daniel Yahir Meza Navarro** |
-| **Backend Dev** | Lógica de negocio (Laravel), API y Teams Sync | **Alex Ivan Zamora Contreras** |
+| **Backend Dev** | Lógica de negocio (Laravel), API y Teams Sync | **Alex Ivan Zamora Contreras** **Luis Manuel Rojas Gonzalez**|
 | **Frontend Dev** | Interfaz de usuario (React) y consumo de datos | **Brayan Abel Mendoza Pilar** |
 
 ## 🏗️ Estado de la Infraestructura (Sprint Día 1)
