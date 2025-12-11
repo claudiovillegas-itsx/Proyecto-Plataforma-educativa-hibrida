@@ -1,0 +1,43 @@
+name: Deploy Laravel App (Backend Folder)
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Bajamos el código
+      - uses: actions/checkout@v4
+
+      # 2. Preparamos PHP (versión 8.2 u 8.1 según uses)
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+
+      # 3. Instalamos dependencias DENTRO de la carpeta Backend
+      - name: Install Composer Dependencies
+        run: cd Backend && composer install --no-interaction --prefer-dist --optimize-autoloader
+
+      # 4. Generamos el archivo .env básico para el build
+      - name: Copy .env
+        run: |
+          cd Backend
+          cp .env.example .env
+          php artisan key:generate
+
+      # 5. Desplegamos a Azure
+      - name: 'Deploy to Azure Web App'
+        uses: azure/webapps-deploy@v2
+        with:
+          # Si sabes el nombre de tu app ponlo aquí, si no, puedes borrar esta línea de app-name
+          app-name: 'CloudEduHub-Web-Gutierrez' 
+          slot-name: 'Production'
+          package: ./Backend  # <--- ESTO ES LA CLAVE: Solo subimos la carpeta Backend
+          
+          # REEMPLAZA ESTO CON EL NOMBRE QUE COPIASTE EN EL PASO 1
+          publish-profile: ${{ secrets.AQUI_PEGAS_EL_NOMBRE_DEL_SECRETO }}
