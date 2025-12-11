@@ -28,3 +28,15 @@ Se ha aprovisionado la capa de infraestructura base superando restricciones de d
 | Sprint | Objetivo | Estado | Entregables Clave |
 | :--- | :--- | :--- | :--- |
 | **Día 1: Infraestructura Base** | Aprovisionamiento de la capa IaaS y PaaS inicial en Azure Free Tier y validación de la conectividad básica, superando las restricciones de la suscripción. | **Finalizado** | <ul><li>Migración y aprovisionamiento de recursos en la **Región West US 2**.</li><li>**VM Ubuntu 22.04 LTS (IaaS)** configurada y accesible vía SSH.</li><li>**Azure App Service (PaaS)** con Runtime PHP 8.2 configurado.</li><li>Reglas de firewall para tráfico **HTTP/HTTPS** aplicadas.</li><li>**Webhook de Microsoft Teams** preparado para futuras integraciones SaaS.</li></ul> |
+
+
+
+
+
+
+
+
+
+| Sprint | Objetivo | Estado | Entregables Clave |
+| :--- | :--- | :--- | :--- |
+| **Día 2: Desarrollo de la Interfaz (Frontend)** | Construcción de la interfaz funcional basada en React + Vite, consumiendo el backend existente mediante API REST. Se garantiza compatibilidad con la arquitectura planeada y se sientan las bases visuales para futuras integraciones con Teams, autenticación y métricas. | **Finalizado** | <ul><li>Estructura completa del proyecto **React + Vite**, optimizada para despliegue en Azure Static Web Apps o App Service.</li><li>Implementación del módulo **Dashboard de Tareas**, totalmente funcional.</li><li>Integración directa con el backend vía **Axios**, permitiendo CRUD completo:</li><ul><li>GET /tasks</li><li>POST /tasks</li><li>PUT /tasks/{id}</li><li>DELETE /tasks/{id}</li></ul><li>Diseño visual responsivo con **TailwindCSS**.</li><li>Archivo **.env** para gestión de variables de entorno y conexión con backend.</li><li>Estructura modular en carpetas: `pages/`, `services/`, `styles/` y `components` (preparado para escalar).</li><li>Documentación técnica del frontend incluida en el **README.md**.</li></ul> |
