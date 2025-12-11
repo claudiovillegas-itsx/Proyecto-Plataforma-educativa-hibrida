@@ -1,0 +1,122 @@
+# CloudEduHub Mini – Frontend (React + Vite + TailwindCSS)
+
+Este repositorio contiene la interfaz del proyecto **CloudEduHub Mini**, desarrollada con **React 18**, **Vite** y **TailwindCSS**.  
+El frontend consume los endpoints del backend actual (tareas CRUD) mientras el equipo de desarrollo implementa las funciones avanzadas como autenticación, sincronización con Microsoft Teams y métricas desde Azure Monitor.
+
+El objetivo del frontend es proveer una interfaz limpia, ligera y funcional que permita:
+- Visualizar tareas
+- Crear nuevas tareas
+- Actualizar su estado (completadas / no completadas)
+- Eliminar tareas
+
+---
+
+## 🚀 Tecnologías utilizadas
+
+- **React 18**
+- **Vite**
+- **TailwindCSS**
+- **Axios**
+- **React Router DOM**
+- **Node.js (LTS)**
+
+---
+
+## 📦 Instalación
+
+1. Clonar el repositorio:
+git clone https://github.com/tu-repo/cloudeduhub-frontend.git
+
+2. Entrar a la carpeta del frontend:
+cd Interfaz
+
+3. Instalar dependencias:
+npm install
+
+npm run dev:
+La aplicación estará disponible normalmente en:  
+ **http://localhost:5173**
+
+---
+
+## Build para producción
+npm run build
+npm run preview
+
+
+---
+
+## Variables de entorno
+
+Crear archivo **.env** en la carpeta `Interfaz`:
+VITE_API_BASE=http://localhost:8000/api
+
+Esto apunta al backend local de Laravel.  
+Si usan un backend desplegado (como App Service en Azure), modificarlo a:
+VITE_API_BASE=https://tu-backend.azurewebsites.net/api
+
+---
+
+## Estructura del Proyecto
+Interfaz/
+├─ package.json
+├─ vite.config.js
+├─ index.html
+├─ postcss.config.cjs
+├─ tailwind.config.cjs
+├─ src/
+│ ├─ main.jsx
+│ ├─ App.jsx
+│ ├─ styles/
+│ │ └─ index.css
+│ ├─ services/
+│ │ └─ api.js
+│ └─ pages/
+│ └─ Dashboard.jsx
+
+
+---
+
+## Funcionalidad actual
+
+✔ CRUD completo de tareas  
+✔ Interfaz limpia y funcional  
+✔ Conexión directa al backend vía Axios  
+✔ Responsive y ligera  
+✖ Login no implementado (pendiente en backend)  
+✖ Métricas Azure Monitor no implementadas  
+✖ Sincronización con Teams pendiente  
+
+El frontend está adaptado para funcionar **con el backend actual**, mientras los demás desarrolladores completan las APIs faltantes.
+
+---
+
+## Flujo del Frontend
+
+1. El usuario abre el dashboard  
+2. El frontend llama:
+   - **GET /tasks** → para obtener tareas
+3. El usuario puede:
+   - Crear → **POST /tasks**
+   - Actualizar → **PUT /tasks/{id}**
+   - Eliminar → **DELETE /tasks/{id}**
+4. La UI actualiza la lista automáticamente
+
+---
+
+## Prompts IA utilizados (Requisito obligatorio del proyecto)
+
+Según la rúbrica del proyecto, se documentan los prompts:
+Prompt 1:
+"React dashboard: tasks + Azure integration + Tailwind minimal UI"
+
+Prompt 2:
+"Generate React CRUD components for tasks with create, update, delete functions"
+
+Prompt 3:
+"Adjust frontend to work without login or metrics, using only /tasks endpoints"
+
+Prompt 4:
+"Generate professional README for frontend project with React + Vite"
+
+
